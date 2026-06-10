@@ -15,13 +15,13 @@ A lightweight Windows 11 battery monitoring solution built with PowerShell and B
 ## Architecture
 
 BatteryMonitor.ps1
-        ↓
+       ->
 Win32_Battery
-        ↓
+         ->
 Threshold Check
-        ↓
+       ->
 BurntToast
-        ↓
+        ->
 Windows Notification Center
 
 ## Installation
