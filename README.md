@@ -1,94 +1,51 @@
-\# Battery Monitor Alert
+# Battery Monitor Alert
 
+A lightweight Windows 11 battery monitoring solution built with PowerShell and BurntToast.
 
+## Features
 
-Windows 11 battery monitoring script using PowerShell and BurntToast.
+- Low battery alerts at configurable thresholds
+- Full battery alerts at configurable thresholds
+- Windows toast notifications
+- Audible alerts
+- Duplicate-notification prevention
+- Task Scheduler integration
+- Lightweight and open source
 
+## Architecture
 
+BatteryMonitor.ps1
+        ↓
+Win32_Battery
+        ↓
+Threshold Check
+        ↓
+BurntToast
+        ↓
+Windows Notification Center
 
-\## Features
+## Installation
 
+### 1. Install BurntToast
 
-
-\- Low battery alert at 25%
-
-\- Full battery alert at 90%
-
-\- Windows toast notifications
-
-\- Audible beep alerts
-
-\- Prevents duplicate notifications
-
-\- Designed for Task Scheduler automation
-
-
-
-\## Requirements
-
-
-
-\- Windows 11
-
-\- PowerShell
-
-\- BurntToast module
-
-
-
-\## Install BurntToast
-
-
-
-```powershell
-
+powershell
 Install-Module BurntToast -Scope CurrentUser -Force
 
-```
+### 2. Download Script
 
+...
 
+### 3. Configure Task Scheduler
 
-\## Run Script
+...
 
+## Default Thresholds
 
+| Alert Type | Threshold |
+|------------|------------|
+| Low Battery | 25% |
+| Full Battery | 90% |
 
-```powershell
-
-powershell -ExecutionPolicy Bypass -File "BatteryMonitor.ps1"
-
-```
-
-
-
-\## Task Scheduler
-
-
-
-Create a task:
-
-
-
-\- Trigger: At logon
-
-\- Repeat every 1 minute
-
-\- Duration: Indefinitely
-
-
-
-\## Alert Thresholds
-
-
-
-\- Low Battery: 25%
-
-\- Full Battery: 90%
-
-
-
-\## License
-
-
+## License
 
 MIT
-
